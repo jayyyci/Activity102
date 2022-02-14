@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+<body>
+    <form class="calcu" name="box">
+        <pre>
+            <h1>
+                Let's Compute!
+            </h1>
+            Input the First Number: <input type="text" placeholder="num-1" name="num1">
+            <br>
+            Input the Second Number: <input type="text" placeholder="num-2" name="num2">
+            <br>
+            <input type="button" value="calculate" onclick="result()">
+            <br>
+            ADDITION: <input type="text" name="result1">
+            <br>
+            SUBTRACTION: <input type="text" name="result2">
+            <br>
+            MULTIPLICATION: <input type="text" name="result3">
+            <br>
+            DIVISION: <input type="text" name="result4">
+            <br>
+            REMAINDER: <input type="text" name="result5">
+        </pre>
+    </form>
+
+    <style>
+        .calcu {
+            text-align: center;
+            width: 300px;
+            padding: 40px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, 50%);
+        }
+    </style>
+
+    <script type="text/javascript">
+        function result() {
+            var num_1, num_2, allnum1, allnum2, allnum3, allnum4, allnum5;
+            num_1 = Number(document.box.num1.value);
+            num_2 = Number(document.box.num2.value);
+            allnum1 = num_1 + num_2;
+            allnum2 = num_1 - num_2;
+            allnum3 = num_1 * num_2;
+            allnum4 = num_1 / num_2;
+            allnum5 = num_1 % num_2;
+
+            document.box.result1.value = allnum1;
+            document.box.result2.value = allnum2;
+            document.box.result3.value = allnum3;
+            document.box.result4.value = allnum4;
+            document.box.result5.value = allnum5;
+        }
+    </script>
+
+</body>
+
+</html>
